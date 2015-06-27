@@ -1,0 +1,2 @@
+@CreatePostController = AppController.extend
+  

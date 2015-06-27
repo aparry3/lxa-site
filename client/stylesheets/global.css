@@ -1,0 +1,21 @@
+.loading {
+  padding-top: 100px;
+}
+
+nav {
+  margin-bottom: 0px;
+}
+
+ul.side-nav li a {
+  line-height: 44px;
+  padding: 24px;
+  display: block;
+}
+
+ul.side-nav li {
+  float: none;
+}
+
+footer.page-footer {
+  margin-top: 0px;
+}
