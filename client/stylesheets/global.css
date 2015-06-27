@@ -19,3 +19,8 @@ ul.side-nav li {
 footer.page-footer {
   margin-top: 0px;
 }
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: #388e3c;
+}

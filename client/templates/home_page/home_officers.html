@@ -1,22 +1,23 @@
 <template name="homeOfficers">
-  <div class="sections" id="team">
-      <div class="container">
-          <h2 class="header text_b"> Officers </h2>
-          <div class="row">
-            {{#each officers}}
-              <div class="col s12 m3">
-                  <div class="card card-avatar">
-                      <div class="waves-effect waves-block waves-light">
-                          <img class="circle activator" src="/images/default-user.png">
-                      </div>
-                      <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">{{name}}<br/>
-                              <small><em><a class="green-text text-darken-3" href="#">{{position}}</a></em></small></span>
-                      </div>
-                  </div>
+  <div class="sections" id="officers">
+    <div class="container">
+      <h2 class="header text_b"> Officers </h2>
+      <div class="row">
+        {{#each officers}}
+          <div class="col s12 m3">
+            <div class="card card-avatar">
+              <div class="waves-effect waves-block waves-light">
+                <img class="circle activator" src="/images/default-user.png">
               </div>
-            {{/each}}
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{name}}<br/>
+                  <small><em><a class="green-text text-darken-3" href="#">{{position}}</a></em></small>
+                </span>
+              </div>
+            </div>
           </div>
+        {{/each}}
       </div>
+    </div>
   </div>
 </template>
