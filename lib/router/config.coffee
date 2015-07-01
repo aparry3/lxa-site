@@ -1,6 +1,9 @@
 Router.configure
-  controller: "AppController"
-  loadingTemplate: "loading"
+  layoutTemplate: 'homeLayout'
+  loadingTemplate: 'loading'
+  notFoundTemplate: 'notFound'
+  waitOn: ->
+    [ Meteor.subscribe('notifications') ]
 
 Router.plugin "dataNotFound",
   dataNotFoundTemplate: "notFound"

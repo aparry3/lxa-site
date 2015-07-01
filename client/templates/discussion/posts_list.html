@@ -1,0 +1,20 @@
+<template name="postsList">
+  <div>
+    <div class="container">      
+      {{> addPost}}
+      <ul class="collection">
+        {{#each posts}}
+          {{> postItem}}
+        {{/each}}
+      </ul>
+    </div>
+
+    {{#if nextPath}}
+      <a href="{{nextPath}}">Load more</a>
+    {{else}}
+      {{#unless ready}}
+        {{> loading}}
+      {{/unless}}
+    {{/if}}
+  </div>
+</template>

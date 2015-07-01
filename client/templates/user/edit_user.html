@@ -1,0 +1,60 @@
+<template name="editUser">
+  <div class="well">
+    <form class="form-horizontal">
+  <fieldset>
+    <h4>{{fullName}}</h4>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="hometown" class="col-lg-2 control-label">Hometown</label>
+      <div class="col-lg-10">
+        <input type="hometown" class="form-control" id="hometown" placeholder="Hometown">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="major" class="col-lg-2 control-label">Major</label>
+      <div class="col-lg-10">
+        <input type="major" class="form-control" id="major" placeholder="Major">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="isActive" class="col-lg-2 control-label">Active</label>
+      <div class="col-lg-10">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Status</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="student" id="student" value="student" checked="">
+            Student
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="alumni" id="alumni" value="alumni">
+            Alumni
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+  </div>
+</template>

@@ -1,0 +1,67 @@
+<template name="userPage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 profile">
+        <div class="profile-sidebar">
+          <div class="profile-userpic">
+            <img src="https://www.hubub.com/assets/images/common/default-avatar-dynamic-large.jpg" class="img-responsive" alt="">
+          </div>
+
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              {{fullName}}
+            </div>
+            <div class="profile-usertitle-position">
+              {{profile.position}}
+            </div>
+            <div class="profile-usertitle-phone">
+              {{profile.phone}}
+            </div>
+            <div class="profile-usertitle-email">
+              {{email}}
+            </div>
+            <div class="profile-usertitle-bk">
+              {{profile.class}}, BK {{profile.bk}}
+            </div>
+            <div class="profile-usertitle-hometown">
+              Hometown: {{profile.hometown}}
+            </div>
+            <div class="profile-usertitle-major">
+              Major: {{profile.major}}
+            </div>
+          </div>
+
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li class="{{overview}} showOverview">
+                <a href="#">
+                <i class="fa fa-home"></i>
+                Overview </a>
+              </li>
+              {{#if ownProfile}}
+                <li class="{{edit}} showEdit">
+                  <a href="#">
+                  <i class="fa fa-user"></i>
+                  Account Details </a>
+                </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 profile">
+          <div class="posts page">
+            <div class="wrapper">
+              {{#if showOverview}}
+                {{#each posts}}
+                  {{> postItem}}
+                {{/each}}
+              {{else}}
+                {{> editUser}}
+              {{/if}}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</template>

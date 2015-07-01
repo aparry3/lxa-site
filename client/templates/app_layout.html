@@ -1,0 +1,9 @@
+<template name="appLayout">
+  <div>
+    {{> appHeader}}
+    {{> errors}}
+    <div class="container" id="main">
+      {{> yield}}
+    </div>
+  </div>
+</template>

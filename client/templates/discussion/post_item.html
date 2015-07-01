@@ -1,0 +1,42 @@
+<template name="oldPostItem">
+  <div class="post">
+    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+    <div class="post-content">
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <p>
+        {{pluralize votes "Vote"}},
+        submitted by {{author}},
+        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+    </div>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+  </div>
+</template>
+
+<template name="postItem">
+
+    <li class="collection-item avatar">
+      <img src="/images/default-user.png" alt="" class="circle">
+      <span class="title">{{name}}</span>
+      <p>{{description}}
+      </p>
+      <a href="#!" class="secondary-content"><i class="fa fa-thumbs-o-up"></i></a>
+    </li>
+  <!-- <div class="post">
+    <div class="post-content">
+      <h3><a id="post-view-author">{{author}}</a><span>on {{submitted}}</span></h3>
+      <p>
+        {{content}}
+      </p>
+    </div>
+    <div class="btn-group pull-right">
+      <a href="{{pathFor 'postPage'}}" class="btn btn-default">{{commentsCount}} <i class="fa fa-comment-o"></i></a>
+      <button class="btn btn-default {{upvotedClass}}">{{votes}} <i class="fa fa-thumbs-o-up"></i></button>
+      {{#if ownPost}}
+        <a href="{{pathFor 'postEdit'}}" class="btn btn-default" style="color:goldenrod"><i class="fa fa-pencil"></i></a>
+        <a href="#" class="btn btn-default delete" style="color:firebrick"><i class="fa fa-trash-o"></i></a>
+      {{/if}}
+    </div>
+  </div> -->
+</template>

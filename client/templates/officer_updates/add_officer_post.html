@@ -1,0 +1,36 @@
+<template name="addOfficerPost">
+  <div class="well">
+    <h5>Officer Post</h5>
+    <form class="form-horizontal" role="form">
+      <div class="form-group" style="padding:14px;">
+        <label class="control-label" for="title">Subject for e-mail</label>
+        <div class="controls">
+            <input name="subject" id="subject" type="text" value="" placeholder="Your subject" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group {{errorClass 'content'}}" style="padding:14px;">
+        <label class="control-label" for="title">Content</label>
+        <div class="controls">
+          <textarea name="content" id="content" class="form-control" value="{{content}}" placeholder="Add content here"  rows="3"></textarea>
+          <span class="help-block">{{errorMessage 'content'}}</span>
+        </div>
+      </div>
+      {{#if showUrl}}
+        <div class="form-group" style="padding:14px;">
+          <label class="control-label" for="url">URL</label>
+          <div class="controls">
+            <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
+          </div>
+        </div>
+      {{/if}}
+      <input class="btn btn-primary pull-right" type="Submit"/>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"><i class="fa fa-comment-o"></i></button>
+        <button type="button" class="btn btn-default"><i class="fa fa-envelope-o"></i></button>
+        <button type="button" class="btn btn-default"><i class="fa fa-mobile"></i></button>
+        <button type="button" class="btn btn-default showUrl"><i class="fa fa-link"></i></button>
+        <button type="button" class="btn btn-default"><i class="fa fa-picture-o"></i></button>
+      </div>
+    </form>
+  </div>
+</template>
